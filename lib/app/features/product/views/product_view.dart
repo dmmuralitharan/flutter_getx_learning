@@ -15,21 +15,21 @@ class ProductView extends StatelessWidget {
       ),
       body: Obx(
         () {
-          return ListView.builder(
-            itemCount: productController.products.length,
-            itemBuilder: (context, index) {
-              final product = productController.products[index];
+            return ListView.builder(
+              itemCount: productController.products.length,
+              itemBuilder: (context, index) {
+                final product = productController.products[index];
 
-              return ListTile(
-                title: Text(product.name),
-                subtitle: Text('\$ ${product.price.toString()}'),
-                onTap: () {
-                  Get.toNamed("/product_details", arguments: product);
-                },
-              );
-            },
-          );
-        },
+                return ListTile(
+                  title: Text(product.name),
+                  subtitle: Text('\$ ${product.price.toString()}'),
+                  onTap: () {
+                    Get.toNamed("/product_details", arguments: product);
+                  },
+                );
+              },
+            );
+          },
       ),
     );
   }

@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:ecom/app/routes/app_routes.dart';
 import 'package:ecom/app/features/product/views/product_details_view.dart';
 import 'package:ecom/app/features/product/views/product_view.dart';
+import 'package:ecom/app/features/product/views/cart_view.dart';
 
 class AppPages {
   static final routes = [
@@ -11,7 +12,11 @@ class AppPages {
     ),
     GetPage(
       name: AppRoutes.productDetails,
-      page: () => const ProductDetailsView(),
+      page: () => ProductDetailsView(),
+    ),
+    GetPage(
+      name: AppRoutes.cart,
+      page: () => CartView(),
     ),
   ];
 }
