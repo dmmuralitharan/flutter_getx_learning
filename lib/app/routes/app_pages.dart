@@ -1,3 +1,4 @@
+import 'package:ecom/app/features/product/views/checkout_view.dart';
 import 'package:get/get.dart';
 import 'package:ecom/app/routes/app_routes.dart';
 import 'package:ecom/app/features/product/views/product_details_view.dart';
@@ -17,6 +18,10 @@ class AppPages {
     GetPage(
       name: AppRoutes.cart,
       page: () => CartView(),
+    ),
+    GetPage(
+      name: AppRoutes.checkout,
+      page: () => const CheckoutView(),
     ),
   ];
 }

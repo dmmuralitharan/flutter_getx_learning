@@ -1,5 +1,6 @@
 import 'package:ecom/app/features/product/controllers/cart_controller.dart';
 import 'package:ecom/app/features/product/models/product_model.dart';
+import 'package:ecom/app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,7 +17,7 @@ class ProductDetailsView extends StatelessWidget {
         title: const Text("Product Details"),
         actions: [
           IconButton(
-            onPressed: () => Get.toNamed('/cart'),
+            onPressed: () => Get.toNamed(AppRoutes.cart),
             icon: const Icon(Icons.shopping_cart),
           ),
         ],
@@ -41,6 +42,9 @@ class ProductDetailsView extends StatelessWidget {
               },
               child: const Text("Add to Cart"),
             ),
+            const SizedBox(
+              height: 20,
+            )
           ],
         ),
       ),
