@@ -50,7 +50,30 @@ class ProductDetailsView extends StatelessWidget {
             ),
             const SizedBox(
               height: 20,
-            )
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  Get.bottomSheet(
+                    Container(
+                      color: Colors.white,
+                      child: Wrap(
+                        children: <Widget>[
+                          ListTile(
+                            leading: const Icon(Icons.shopping_cart),
+                            title: const Text("View Cart"),
+                            onTap: () => Get.offAndToNamed(AppRoutes.cart),
+                          ),
+                          ListTile(
+                            leading: const Icon(Icons.payment),
+                            title: const Text("View Checkout"),
+                            onTap: () => Get.offAndToNamed(AppRoutes.checkout),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+                child: const Text("More Actions")),
           ],
         ),
       ),
