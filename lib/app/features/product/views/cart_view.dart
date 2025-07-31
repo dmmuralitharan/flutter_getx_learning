@@ -27,8 +27,19 @@ class CartView extends StatelessWidget {
                       title: Text(productItem.name),
                       subtitle: Text('\$ ${productItem.price.toString()}'),
                       trailing: IconButton(
-                        onPressed: () =>
-                            cartController.removeFromCart(productItem),
+                        onPressed: () {
+                          Get.defaultDialog(
+                            title: "Remove Item",
+                            middleText: "Are you sure ?",
+                            textConfirm: "Yes",
+                            textCancel: "No",
+                            confirmTextColor: Colors.white,
+                            onConfirm: () {
+                              cartController.removeFromCart(productItem);
+                              Get.back();
+                            },
+                          );
+                        },
                         icon: const Icon(Icons.remove_circle_outline),
                       ),
                     );
