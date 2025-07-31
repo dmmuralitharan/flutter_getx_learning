@@ -1,3 +1,5 @@
+import 'package:ecom/app/features/product/binding/cart_binding.dart';
+import 'package:ecom/app/features/product/binding/product_binding.dart';
 import 'package:ecom/app/features/product/views/checkout_view.dart';
 import 'package:get/get.dart';
 import 'package:ecom/app/routes/app_routes.dart';
@@ -10,10 +12,12 @@ class AppPages {
     GetPage(
       name: AppRoutes.product,
       page: () => ProductView(),
+      binding: ProductBinding(),
     ),
     GetPage(
       name: AppRoutes.productDetails,
       page: () => ProductDetailsView(),
+      binding: CartBinding(),
     ),
     GetPage(
       name: AppRoutes.cart,
