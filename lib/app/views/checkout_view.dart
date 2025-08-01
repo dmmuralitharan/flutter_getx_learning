@@ -25,7 +25,7 @@ class CheckoutView extends StatelessWidget {
                 final CartController cartController =
                     Get.find<CartController>();
 
-                cartController.cartService.cartItems();
+                cartController.cartService.clearCart();
 
                 Get.snackbar(
                   "Order Placed",
