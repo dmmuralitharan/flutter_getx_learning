@@ -1,4 +1,4 @@
-import 'package:ecom/app/features/product/controllers/product_controller.dart';
+import 'package:ecom/app/controllers/product_controller.dart';
 import 'package:get/get.dart';
 
 class ProductBinding extends Bindings {

@@ -1,4 +1,4 @@
-import 'package:ecom/app/features/product/models/product_model.dart';
+import 'package:ecom/app/models/product_model.dart';
 import 'package:get/get.dart';
 
 class ProductController extends GetxController {

@@ -1,4 +1,4 @@
-import 'package:ecom/app/features/product/controllers/cart_controller.dart';
+import 'package:ecom/app/controllers/cart_controller.dart';
 import 'package:ecom/app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -52,7 +52,7 @@ class CartView extends StatelessWidget {
             return Padding(
               padding: const EdgeInsets.all(16.0),
               child: Text(
-                'Todal: \$ ${cartController.totalAmount.value.toStringAsFixed(2)}',
+                'Todal: \$ ${cartController.totalAmount.toStringAsFixed(2)}',
                 style: const TextStyle(fontSize: 24),
               ),
             );

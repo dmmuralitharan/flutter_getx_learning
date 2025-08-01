@@ -1,3 +1,4 @@
+import 'package:ecom/app/controllers/cart_controller.dart';
 import 'package:ecom/app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -21,9 +22,22 @@ class CheckoutView extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
+                final CartController cartController =
+                    Get.find<CartController>();
+
+                cartController.cartService.cartItems();
+
+                Get.snackbar(
+                  "Order Placed",
+                  "Your Order Placed Successfully",
+                  duration: const Duration(seconds: 2),
+                  backgroundColor: Colors.green,
+                  colorText: Colors.white,
+                );
+
                 Get.offAllNamed(AppRoutes.product);
               },
-              child: const Text("Go to home"),
+              child: const Text("Place your order"),
             ),
           ],
         ),

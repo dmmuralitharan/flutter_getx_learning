@@ -1,4 +1,4 @@
-import 'package:ecom/app/features/product/controllers/cart_controller.dart';
+import 'package:ecom/app/controllers/cart_controller.dart';
 import 'package:get/get.dart';
 
 class CartBinding extends Bindings {
